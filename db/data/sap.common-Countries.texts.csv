@@ -1,0 +1,31 @@
+code,locale,name,descr
+en,US,United States,United States of America
+de,US,Vereinigte Staaten,Vereinigte Staaten von Amerika
+fr,US,États-Unis,États-Unis d'Amérique
+en,DE,Germany,Federal Republic of Germany
+de,DE,Deutschland,Bundesrepublik Deutschland
+fr,DE,Allemagne,République fédérale d'Allemagne
+en,GB,United Kingdom,United Kingdom of Great Britain and Northern Ireland
+de,GB,Vereinigtes Königreich,Vereinigtes Königreich Großbritannien und Nordirland
+fr,GB,Royaume-Uni,Royaume-Uni de Grande-Bretagne et d'Irlande du Nord
+en,FR,France,French Republic
+de,FR,Frankreich,Französische Republik
+fr,FR,France,République française
+en,JP,Japan,Japan
+de,JP,Japan,Japan
+fr,JP,Japon,Japon
+en,CN,China,People's Republic of China
+de,CN,China,Volksrepublik China
+fr,CN,Chine,République populaire de Chine
+en,IN,India,Republic of India
+de,IN,Indien,Republik Indien
+fr,IN,Inde,République de l'Inde
+en,BR,Brazil,Federative Republic of Brazil
+de,BR,Brasilien,Föderative Republik Brasilien
+fr,BR,Brésil,République fédérative du Brésil
+en,AU,Australia,Commonwealth of Australia
+de,AU,Australien,Australischer Bund
+fr,AU,Australie,Commonwealth d'Australie
+en,CA,Canada,Canada
+de,CA,Kanada,Kanada
+fr,CA,Canada,Canada

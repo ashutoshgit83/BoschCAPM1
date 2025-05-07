@@ -1,0 +1,20 @@
+{
+  // uncomment entries once all libraries have been installed via 'npm install'
+  "eslint.validate": [
+    // "cds",
+    // "csn",
+    // "csv",
+    // "csv (semicolon)",
+    // "tab",
+    // "tsv"
+  ],
+  "SAP HANA Database Explorer.UseObjectsDefinitionForSqlGeneration.RetentionTime": 7,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "mycapapp1",
+      "database": "db.sqlite"
+    }
+  ]
+}

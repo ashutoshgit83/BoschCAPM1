@@ -1,0 +1,128 @@
+### Get catalog service document
+http://localhost:4004/odata/v4/CatalogService
+
+###Get metadata
+http://localhost:4004/odata/v4/CatalogService/$metadata
+
+###Get Employee set
+http://localhost:4004/odata/v4/CatalogService/employeeSet   
+
+###Get Employee top 2 using pagination
+http://localhost:4004/odata/v4/CatalogService/employeeSet?$top=2
+
+###Get 3 employees after skipping first 3 
+http://localhost:4004/odata/v4/CatalogService/employeeSet?$skip=3&$top=3
+
+###Get employees record by using its key    
+http://localhost:4004/odata/v4/CatalogService/employeeSet('0122232d-1ea8-4a34-9c2a-8158a608231d')
+
+### Get employee with filter on languate as German   
+http://localhost:4004/odata/v4/CatalogService/employeeSet?$filter=language ='German'
+
+###Post call with new employee
+POST http://localhost:4004/odata/v4/CatalogService/employeeSet
+Content-Type: application/json
+
+    {
+      "nameFirst": "Ashutosh",
+      "nameMiddle": "Anant",
+      "nameLast": "Ambekar",
+      "nameInitials": "AAA",
+      "sex": "M",
+      "language": "M",
+      "phoneNumber": "+1-555-678-9012",
+      "email": "ash.aaa@example.com",
+      "loginName": "aaa3kor",
+      "Currency_code": "INR",
+      "salaryAmount": 30000,
+      "accountNumber": "6789012345",
+      "bankId": "UVWX1234",
+      "bankName": "ICICI Bank"
+    }
+
+### Get created employee using id 20834971-3309-4194-b5fb-a36b29118619
+http://localhost:4004/odata/v4/CatalogService/employeeSet('20834971-3309-4194-b5fb-a36b29118619')
+
+###patch salary to different number for Ashutosh    
+PATCH http://localhost:4004/odata/v4/CatalogService/employeeSet('611a3454-a793-4780-9332-659f75007fa5')
+Content-Type: application/json
+
+    {
+      "salaryAmount": 3500.38
+    }
+
+### delete newly created employee using nameFirst column
+DELETE http://localhost:4004/odata/v4/CatalogService/employeeSet('20834971-3309-4194-b5fb-a36b29118619')
+
+###test odata v2 from v4 service
+http://localhost:4004/odata/v2/CatalogService/employeeSet
+
+###get PO set
+http://localhost:4004/odata/v4/CatalogService/poworklistSet
+
+###post call for action boost
+POST http://localhost:4004/odata/v4/CatalogService/poworklistSet('8dafbdc3-3409-47a2-8a7d-fb77c80ad8bc')/boost
+Content-Type: application/json
+
+{}
+
+### get largest PO number details
+http://localhost:4004/odata/v4/CatalogService/getLargestPO
+
+###get po details for particular ID using function
+http://localhost:4004/odata/v4/CatalogService/getpodetails('36065d7a-aba2-4be2-9628-e9e5e5fe2b84')
+
+###post call for action addnew
+POST http://localhost:4004/odata/v4/CatalogService/poworklist/addnew
+Content-Type: application/json
+
+    {
+      "PurchaseOrderId": "1000000999",
+      "ItemPosition" : "10",
+      "CURRENCY_code": "USD",
+      "GROSS_AMOUNT": 2500,
+      "NET_AMOUNT": 2000,
+      "TAX_AMOUNT": 500,
+      "createdAt": "2025-05-01T10:30:00.000Z",
+      "createdBy": "SYSTEM",
+      "modifiedAt": "2025-05-02T10:30:00.000Z",
+      "modifiedBy": "ASHUTOSH",
+      "PARTNER_GUID_ID": "partner-001",
+      "LIFECYCLE_STATUS": "N",
+      "OVERALL_STATUS": "A"
+    }
+
+###get PO set
+http://localhost:4004/odata/v4/CatalogService/poworklistSet/102ed592-d9fa-4107-8ccb-bdac7e990444
+
+###post call for action boost
+POST http://localhost:4004/odata/v4/CatalogService/poworklistSet('102ed592-d9fa-4107-8ccb-bdac7e990444')/boost
+Content-Type: application/json
+
+{}
+
+### function updatePO
+http://localhost:4004/odata/v4/CatalogService/poworklistSet/06f0b7f5-e236-40a6-b619-f5b44e65c9c1/updatePO
+
+
+### before event generic handler
+http://localhost:4004/odata/v4/CatalogService/employeeSet
+
+// testing employeeSrv new service bypassing cap 
+###
+http://localhost:4004/odata/v4/MyService/EmployeeSrv
+
+###
+POST http://localhost:4004/odata/v4/MyService/EmployeeSrv
+Content-Type: application/json
+
+
+{
+    "nameFirst": "Anil",
+    "nameLast": "Kapoor",
+    "loginName": "Zkas"
+}
+
+
+
+   
