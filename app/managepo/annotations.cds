@@ -25,7 +25,7 @@ annotate service.poworklistSet with @(
         },
           {
             $Type: 'UI.DataField',
-            Value: PARTNER_GUID.ADDRESS_GUID.COUNTRY.code,
+            Value: PARTNER_GUID.ADDRESS_GUID.COUNTRY_code,
         },
 
         {
