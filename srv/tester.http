@@ -7,6 +7,26 @@ http://localhost:4004/odata/v4/CatalogService/$metadata
 ###Get Employee set
 http://localhost:4004/odata/v4/CatalogService/employeeSet   
 
+http://localhost:4004/odata/v4/CatalogService/employeeSet
+
+// testing employeeSrv new service bypassing cap 
+###
+http://localhost:4004/odata/v4/MyService/EmployeeSrv
+
+###
+POST http://localhost:4004/odata/v4/MyService/EmployeeSrv
+Content-Type: application/json
+
+
+{
+    "nameFirst": "Anil",
+    "nameLast": "Kapoor",
+    "loginName": "Zkas"
+}
+
+
+
+   
 ###Get Employee top 2 using pagination
 http://localhost:4004/odata/v4/CatalogService/employeeSet?$top=2
 
@@ -106,23 +126,3 @@ http://localhost:4004/odata/v4/CatalogService/poworklistSet/06f0b7f5-e236-40a6-b
 
 
 ### before event generic handler
-http://localhost:4004/odata/v4/CatalogService/employeeSet
-
-// testing employeeSrv new service bypassing cap 
-###
-http://localhost:4004/odata/v4/MyService/EmployeeSrv
-
-###
-POST http://localhost:4004/odata/v4/MyService/EmployeeSrv
-Content-Type: application/json
-
-
-{
-    "nameFirst": "Anil",
-    "nameLast": "Kapoor",
-    "loginName": "Zkas"
-}
-
-
-
-   

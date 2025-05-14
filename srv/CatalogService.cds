@@ -2,9 +2,20 @@ using { ashutosh.db.master, ashutosh.db.transaction } from '../db/model';
 using { ashutosh.cds.CDSViews } from '../db/CDSViews';
 
 
-service CatalogService @( path: 'CatalogService') {
+service CatalogService @( path: 'CatalogService', requires: 'authenticated-user') {
 
-    entity employeeSet as projection on master.employees ;
+    entity employeeSet
+    @(
+      restrict: [
+        {
+          grant:'READ', to:'Viewer', where: 'bankName = $user.BankName'
+        },
+        {
+          grant:'WRITE', to:'Admin'
+        }
+      ]
+    )
+     as projection on master.employees ;
     entity poworklistSet @(odata.draft.enabled : true,
     Common.DefaultValuesFunction: 'loadInitials' ) as projection on transaction.purchaseorder{
     *,
